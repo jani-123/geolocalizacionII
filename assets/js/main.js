@@ -22,7 +22,7 @@ var mapas = {
             streetViewControl:false
         });
      
-        let Origen = $('#origen');//asocia el o autocomplete
+        let Origen = document.getElementById('origen');//asocia el o autocomplete
             mapas.item.autocompletarOrigen = new google.maps.places.Autocomplete(Origen);//pasa como parametro el o dom d
             mapas.item.autocompletarOrigen.bindTo('bounds', mapas.item.map);   
             mapas.item.detalleUbicacionOrigen = new google.maps.InfoWindow();
@@ -30,7 +30,7 @@ var mapas = {
 
             mapas.crearListas(mapas.item.autocompletarOrigen, mapas.item.detalleUbicacionOrigen, mapas.item.markerOrigen);
     
-        let Destino = $('#destino');
+        let Destino = document.getElementById('destino');
             mapas.item.autocompletarDestino = new google.maps.places.Autocomplete(Destino);
             mapas.item.autocompletarDestino.bindTo('bounds', mapas.item.map);
             mapas.item.detalleUbicacionDestino = new google.maps.InfoWindow();
